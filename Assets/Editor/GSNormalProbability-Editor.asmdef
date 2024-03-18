@@ -1,0 +1,10 @@
+{
+  "name": "GSNormalProbability-Editor",
+  "references": [
+    "GSNormalProbability"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": []
+}
