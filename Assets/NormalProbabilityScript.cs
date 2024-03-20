@@ -173,7 +173,7 @@ public class NormalProbabilityScript : MonoBehaviour
                 case 3:
                     AssociatedNumbers.Add(new List<int>() { -Rnd.Range(0, 3001) });
                     Answers.Add(FindProbability(-AssociatedNumbers.Last().First()).ToString("0000"));
-                    Debug.LogFormat("[Normal Probability #{0}] Stage 2: Z < {1}. Using the table like normal (there is both a negative number and a greater than sign), the answer is 0.{2}.", _moduleID, AssociatedNumbers.Last().First() / 1000f, Answers.Last());
+                    Debug.LogFormat("[Normal Probability #{0}] Stage 2: Z > {1}. Using the table like normal (there is both a negative number and a greater than sign), the answer is 0.{2}.", _moduleID, AssociatedNumbers.Last().First() / 1000f, Answers.Last());
                     break;
 
                 case 4:
@@ -233,7 +233,7 @@ public class NormalProbabilityScript : MonoBehaviour
                 else
                 {
                     Module.HandleStrike();
-                    Debug.LogFormat("[Normal Probability #{0}] You submitted 0.{1} for stage {2}, which was incorrect. Strike!", _moduleID, InputDigits, CurrentStage);
+                    Debug.LogFormat("[Normal Probability #{0}] You submitted 0.{1} for stage {2}, which was incorrect. Strike!", _moduleID, InputDigits, CurrentStage + 1);
                 }
             }
             else if (pos == 10)
